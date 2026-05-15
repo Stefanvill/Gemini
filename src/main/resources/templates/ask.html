@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<form method="post" th:action="@{/ask}">
+    <label for="input">Question for Gemini</label>
+    <input id="input" name="input" placeholder="Question for Gemini" th:value="${question}" type="text">
+    <button type="submit">Submit question</button>
+</form>
+
+<div th:if="${answer}">
+    <h2>Answer</h2>
+    <p th:text="${answer}"></p>
+</div>
+
 </body>
 </html>

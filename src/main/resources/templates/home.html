@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<div>
+    <h2>Saved Q&A</h2>
+    <div th:each="d : ${display}">
+        <p>-----------------------------------------------------</p>
+        <p th:text="'ID: ' + ${d.getId()}"></p>
+        <p th:text="'Question: ' + ${d.getQuestion()}"></p>
+        <p th:text="'Answer: ' + ${d.getAnswer()}"></p>
+    </div>
+</div>
+
 </body>
 </html>
